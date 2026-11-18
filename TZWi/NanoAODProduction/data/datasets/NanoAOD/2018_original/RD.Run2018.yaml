@@ -1,0 +1,64 @@
+dataset:
+    Run2018.DoubleMuon:
+        /DoubleMuon/Run2018A-UL2018_MiniAODv2_NanoAODv9-v1/NANOAOD:
+        - /store/data/Run2018A/DoubleMuon/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v1/270000
+        /DoubleMuon/Run2018B-UL2018_MiniAODv2_NanoAODv9-v1/NANOAOD:
+        - /store/data/Run2018B/DoubleMuon/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v1/270000
+        /DoubleMuon/Run2018C-UL2018_MiniAODv2_NanoAODv9-v1/NANOAOD:
+        - /store/data/Run2018C/DoubleMuon/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v1/130000
+        /DoubleMuon/Run2018D-UL2018_MiniAODv2_NanoAODv9-v2/NANOAOD:
+        - /store/data/Run2018D/DoubleMuon/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v2/2430000
+    Run2018.EGamma:
+        /EGamma/Run2018A-UL2018_MiniAODv2_NanoAODv9-v1/NANOAOD:
+        - /store/data/Run2018A/EGamma/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v1/270000
+        - /store/data/Run2018A/EGamma/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v1/70000
+        /EGamma/Run2018B-UL2018_MiniAODv2_NanoAODv9-v1/NANOAOD:
+        - /store/data/Run2018B/EGamma/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v1/280000
+        /EGamma/Run2018C-UL2018_MiniAODv2_NanoAODv9-v1/NANOAOD:
+        - /store/data/Run2018C/EGamma/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v1/70000
+        - /store/data/Run2018C/EGamma/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v1/250000
+        /EGamma/Run2018D-UL2018_MiniAODv2_NanoAODv9-v3/NANOAOD:
+        - /store/data/Run2018D/EGamma/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v3/250000
+        - /store/data/Run2018D/EGamma/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v3/100000
+        - /store/data/Run2018D/EGamma/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v3/230000
+        - /store/data/Run2018D/EGamma/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v3/260000
+        - /store/data/Run2018D/EGamma/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v3/2510000
+    Run2018.MuonEG:
+        /MuonEG/Run2018A-UL2018_MiniAODv2_NanoAODv9-v1/NANOAOD:
+        - /store/data/Run2018A/MuonEG/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v1/280000
+        /MuonEG/Run2018B-UL2018_MiniAODv2_NanoAODv9-v1/NANOAOD:
+        - /store/data/Run2018B/MuonEG/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v1/280000
+        /MuonEG/Run2018C-UL2018_MiniAODv2_NanoAODv9-v1/NANOAOD:
+        - /store/data/Run2018C/MuonEG/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v1/270000
+        - /store/data/Run2018C/MuonEG/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v1/280000
+        - /store/data/Run2018C/MuonEG/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v1/70000
+        /MuonEG/Run2018D-UL2018_MiniAODv2_NanoAODv9-v1/NANOAOD:
+        - /store/data/Run2018D/MuonEG/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v1/280000
+    Run2018.SingleMuon:
+        /SingleMuon/Run2018A-UL2018_MiniAODv2_NanoAODv9-v2/NANOAOD:
+        - /store/data/Run2018A/SingleMuon/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v2/2550000
+        - /store/data/Run2018A/SingleMuon/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v2/30000
+        /SingleMuon/Run2018B-UL2018_MiniAODv2_NanoAODv9-v2/NANOAOD:
+        - /store/data/Run2018B/SingleMuon/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v2/250000
+        /SingleMuon/Run2018C-UL2018_MiniAODv2_NanoAODv9-v2/NANOAOD:
+        - /store/data/Run2018C/SingleMuon/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v2/110000
+        - /store/data/Run2018C/SingleMuon/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v2/260000
+        - /store/data/Run2018C/SingleMuon/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v2/2430000
+        - /store/data/Run2018C/SingleMuon/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v2/70000
+        - /store/data/Run2018C/SingleMuon/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v2/100000
+        /SingleMuon/Run2018D-UL2018_MiniAODv2_NanoAODv9-v1/NANOAOD:
+        - /store/data/Run2018D/SingleMuon/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v1/280000
+        - /store/data/Run2018D/SingleMuon/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v1/130000
+    Run2018.Tau:
+        /Tau/Run2018A-UL2018_MiniAODv2_NanoAODv9-v2/NANOAOD:
+        - /store/data/Run2018A/Tau/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v2/2810000
+        /Tau/Run2018B-UL2018_MiniAODv2_NanoAODv9-v1/NANOAOD:
+        - /store/data/Run2018B/Tau/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v1/120000
+        - /store/data/Run2018B/Tau/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v1/270000
+        /Tau/Run2018C-UL2018_MiniAODv2_NanoAODv9-v1/NANOAOD:
+        - /store/data/Run2018C/Tau/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v1/120000
+        - /store/data/Run2018C/Tau/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v1/70000
+        /Tau/Run2018D-UL2018_MiniAODv2_NanoAODv9-v2/NANOAOD:
+        - /store/data/Run2018D/Tau/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v2/2500000
+        - /store/data/Run2018D/Tau/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v2/2430000
+        - /store/data/Run2018D/Tau/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v2/230000

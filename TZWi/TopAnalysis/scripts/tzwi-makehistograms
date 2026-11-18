@@ -1,0 +1,130 @@
+#!/usr/bin/env python
+
+from ROOT import *
+import yaml
+import sys, os
+from array import array
+
+baseCut = sys.argv[1] ## Baseline cut to apply for every steps. "1" not to apply any cut
+baseWeight = sys.argv[2] ## Baseline weight. this can be overridden by weight definition in the config file
+configFile = sys.argv[3] ## the yaml file which defines cut steps and histograms
+dName = sys.argv[4] ## directory name which contains ntuples
+odName = sys.argv[5] ## output directory name
+
+config = yaml.load(open(configFile))
+steps = config['steps']
+hists = config['hists']
+
+ofName = odName+'/'+os.path.basename(dName)+".root"
+if os.path.exists(ofName): sys.exit(1)
+if not os.path.exists(odName):
+    try: os.makedirs(odName)
+    except: pass
+
+#chain = TChain("Friends")
+chain = TChain("Events")
+chain.Add(dName+"/*_Skim.root")
+gROOT.SetBatch(True)
+
+if 'NPROC' in os.environ:
+    nProc = os.environ['NPROC']
+    prf = TProof.Open("workers=%s" % nProc)
+    chain.SetProof(True)
+
+print "Processing", ofName
+
+oFile = TFile(ofName, 'recreate')
+
+hWeights = {}
+for istep, step in enumerate(steps):
+    weights = baseWeight.split('*')
+    if 'weightsToDrop' in step:
+        weights = list(set(weights)-set(step['weightsToDrop']))
+
+    cuts = [baseCut]+step['cuts']
+    cut = '&&'.join(['(%s)' % x for x in cuts])
+
+    dout = oFile.mkdir(step['name'])
+    dout.cd()
+
+    ## Fill Weight histogram first
+    hWeight = TH1D("hWeight", "weight;weight;Events", 150, -5, 10)
+    hWeight.Sumw2()
+    chain.Draw("%s>>hWeight" % ('*'.join(weights)), cut, "goff")
+    hWeight.Write()
+    hWeights[step['name']] = hWeight
+
+    ## Fill histograms in this step
+    if 'hists' not in step: continue
+    for hname, hdef in [(x, hists[x]) for x in step['hists'] if x in hists]:
+        h = None
+        bins = hdef['bins']
+        if type(bins) == list:
+            if len(bins) == 2 and type(bins[0]) == list:
+                h = TH2D('h'+hname, hdef['title'], len(bins[0])-1, array('d', bins[0]),
+                                               len(bins[1])-1, array('d', bins[1]))
+            else:
+                h = TH1D('h'+hname, hdef['title'], len(bins)-1, array('d', bins))
+        else:
+            if 'nbinsY' in bins:
+                h = TH2D('h'+hname, hdef['title'], bins['nbinsX'], bins['xmin'], bins['xmax'],
+                                               bins['nbinsY'], bins['ymin'], bins['ymax'])
+            else:
+                h = TH1D('h'+hname, hdef['title'], bins['nbinsX'], bins['xmin'], bins['xmax'])
+        h.Sumw2()
+        #h.SetDirectory(dout)
+
+        expr = hdef['expr'] if 'expr' in hdef else hname
+
+        weights1 = weights[:]
+        if 'weightsToDrop' in hdef:
+            weights1 = list(set(weights)-set(hdef['weightsToDrop']))
+        weight1 = '*'.join(weights1)
+
+        cuts1 = cuts[:]
+        if 'cuts' in hdef:
+            cuts1 = list(set(cuts)|set(hdef['cuts']))
+        if 'cutsToDrop' in hdef:
+            cuts1 = list(set(cuts)-set(hdef['cutsToDrop']))
+        cut1 = '&&'.join(['(%s)' % x for x in cuts1 if x != "1"])
+        if cut1 == "": cut1 = "1"
+
+        if weight1 != "1":
+            chain.Draw("%s>>h%s" % (expr, hname), "(%s)*(%s)" % (weight1, cut1), "goff")
+        else:
+            chain.Draw("%s>>h%s" % (expr, hname), "(%s)" % (cut1), "goff")
+
+        h.Write()
+        del h
+
+oFile.cd()
+hCutFlow = TH1D("hCutFlow", "Cut flow;;Events", len(steps)+1, 0, len(steps)+1)
+hCutFlowNW = TH1D("hCutFlowNW", "Cut flow No Weight;;Events (unweighted)", len(steps)+1, 0, len(steps)+1)
+hCutFlow.Sumw2()
+hCutFlowNW.Sumw2()
+for istep, step in enumerate(steps):
+    stepName = step['name']
+
+    hCutFlow.GetXaxis().SetBinLabel(istep+2, stepName)
+    hCutFlowNW.GetXaxis().SetBinLabel(istep+2, stepName)
+
+    nEventNW = hWeights[stepName].GetEntries()
+    avgW = hWeights[stepName].GetMean()
+    hCutFlowNW.SetBinContent(istep+2, nEventNW)
+    #hCutFlowNW.SetBinError(istep+2, sqrt(nEventNW))
+    hCutFlow.SetBinContent(istep+2, nEventNW*avgW)
+    #rmsW = hWeights[step['name']].GetRMS()
+    #hCutFlow.SetBinError(istep+2, sqrt(rms*avgW*nEventNW))
+
+fins = chain.GetListOfFiles()
+for fName in [fins.At(i).GetTitle() for i in range(fins.GetEntries())]:
+    fin = TFile(fName)
+    h = fin.Get("nEventsGenWeighted")
+    hNW = fin.Get("nEvents")
+    if h != None: hCutFlow.AddBinContent(1, h.Integral())
+    if hNW != None: hCutFlowNW.AddBinContent(1, hNW.Integral())
+
+oFile.cd()
+hCutFlow.Write()
+hCutFlowNW.Write()
+oFile.Close()

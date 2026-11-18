@@ -1,0 +1,4 @@
+#!/bin/bash
+
+find *NANOAOD*/ -name 'result_*.tgz' | awk '{print "xzf "$1" ./ntuple_2018"}' | xargs -L1 -P$(nproc) tar
+

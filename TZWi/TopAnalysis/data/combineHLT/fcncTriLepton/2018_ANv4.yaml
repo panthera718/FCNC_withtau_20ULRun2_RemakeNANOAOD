@@ -1,0 +1,57 @@
+###### DoubleMu, DoubleEG
+
+RunIISummer18: "
+  HLT_Ele32_WPTight_Gsf ||
+  HLT_Ele115_CaloIdVT_GsfTrkIdT ||
+  HLT_Ele23_Ele12_CaloIdL_TrackIdL_IsoVL ||
+  HLT_DoubleEle25_CaloIdL_MW ||
+  HLT_Ele16_Ele12_Ele8_CaloIdL_TrackIdL ||
+  HLT_Mu17_TrkIsoVVL_Mu8_TrkIsoVVL_DZ_Mass3p8 ||
+  HLT_Mu37_TkMu27 ||
+  HLT_TripleMu_10_5_5_DZ ||
+  HLT_TripleMu_12_10_5 ||
+  HLT_IsoMu24 ||
+  HLT_IsoMu27 ||
+  HLT_Mu50 ||
+  HLT_TkMu100 ||
+  HLT_Mu23_TrkIsoVVL_Ele12_CaloIdL_TrackIdL_IsoVL_DZ ||
+  HLT_Mu8_TrkIsoVVL_Ele23_CaloIdL_TrackIdL_IsoVL_DZ ||
+  HLT_Mu12_TrkIsoVVL_Ele23_CaloIdL_TrackIdL_IsoVL_DZ ||
+  HLT_Mu23_TrkIsoVVL_Ele12_CaloIdL_TrackIdL_IsoVL ||
+  HLT_Mu27_Ele37_CaloIdL_MW ||
+  HLT_Mu37_Ele27_CaloIdL_MW ||
+  HLT_DiMu9_Ele9_CaloIdL_TrackIdL_DZ ||
+  HLT_Mu8_DiEle12_CaloIdL_TrackIdL
+"
+
+#######################
+
+Run2018.EGamma: "
+  HLT_Ele32_WPTight_Gsf ||
+  HLT_Ele115_CaloIdVT_GsfTrkIdT ||
+  HLT_Ele23_Ele12_CaloIdL_TrackIdL_IsoVL ||
+  HLT_DoubleEle25_CaloIdL_MW ||
+  HLT_Ele16_Ele12_Ele8_CaloIdL_TrackIdL
+"
+Run2018.DoubleMuon: "
+  HLT_Mu17_TrkIsoVVL_Mu8_TrkIsoVVL_DZ_Mass3p8 ||
+  HLT_Mu37_TkMu27 ||
+  HLT_TripleMu_10_5_5_DZ ||
+  HLT_TripleMu_12_10_5
+"
+Run2018.SingleMuon: "
+  HLT_IsoMu24 ||
+  HLT_IsoMu27 ||
+  HLT_Mu50 ||
+  HLT_TkMu100
+"
+Run2018.MuonEG: "
+  HLT_Mu23_TrkIsoVVL_Ele12_CaloIdL_TrackIdL_IsoVL_DZ ||
+  HLT_Mu8_TrkIsoVVL_Ele23_CaloIdL_TrackIdL_IsoVL_DZ ||
+  HLT_Mu12_TrkIsoVVL_Ele23_CaloIdL_TrackIdL_IsoVL_DZ ||
+  HLT_Mu23_TrkIsoVVL_Ele12_CaloIdL_TrackIdL_IsoVL ||
+  HLT_Mu27_Ele37_CaloIdL_MW ||
+  HLT_Mu37_Ele27_CaloIdL_MW ||
+  HLT_DiMu9_Ele9_CaloIdL_TrackIdL_DZ ||
+  HLT_Mu8_DiEle12_CaloIdL_TrackIdL
+"

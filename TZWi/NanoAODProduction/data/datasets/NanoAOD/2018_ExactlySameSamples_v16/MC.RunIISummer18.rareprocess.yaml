@@ -1,0 +1,35 @@
+dataset:
+    MC2018.ST_FCNC-TLL_zct:
+        ? /ST_FCNC-TLL_Tleptonic_kappa_zct_TuneCP5-madgraph-pythia8/RunIISummer20UL18NanoAODv9-tauDecays_106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM
+        :   - /store/mc/RunIISummer20UL18NanoAODv9/ST_FCNC-TLL_Tleptonic_kappa_zct_TuneCP5-madgraph-pythia8/NANOAODSIM/tauDecays_106X_upgrade2018_realistic_v16_L1v1-v2/110000
+            - /store/mc/RunIISummer20UL18NanoAODv9/ST_FCNC-TLL_Tleptonic_kappa_zct_TuneCP5-madgraph-pythia8/NANOAODSIM/tauDecays_106X_upgrade2018_realistic_v16_L1v1-v2/230000
+    MC2018.ST_FCNC-TLL_zut:
+        ? /ST_FCNC-TLL_Tleptonic_kappa_zut_TuneCP5-madgraph-pythia8/RunIISummer20UL18NanoAODv9-tauDecays_106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM
+        :   - /store/mc/RunIISummer20UL18NanoAODv9/ST_FCNC-TLL_Tleptonic_kappa_zut_TuneCP5-madgraph-pythia8/NANOAODSIM/tauDecays_106X_upgrade2018_realistic_v16_L1v1-v2/2430000
+            - /store/mc/RunIISummer20UL18NanoAODv9/ST_FCNC-TLL_Tleptonic_kappa_zut_TuneCP5-madgraph-pythia8/NANOAODSIM/tauDecays_106X_upgrade2018_realistic_v16_L1v1-v2/2500000
+            - /store/mc/RunIISummer20UL18NanoAODv9/ST_FCNC-TLL_Tleptonic_kappa_zut_TuneCP5-madgraph-pythia8/NANOAODSIM/tauDecays_106X_upgrade2018_realistic_v16_L1v1-v2/110000
+            - /store/mc/RunIISummer20UL18NanoAODv9/ST_FCNC-TLL_Tleptonic_kappa_zut_TuneCP5-madgraph-pythia8/NANOAODSIM/tauDecays_106X_upgrade2018_realistic_v16_L1v1-v2/230000
+            - /store/mc/RunIISummer20UL18NanoAODv9/ST_FCNC-TLL_Tleptonic_kappa_zut_TuneCP5-madgraph-pythia8/NANOAODSIM/tauDecays_106X_upgrade2018_realistic_v16_L1v1-v2/250000
+    MC2018.TT_FCNC-T2ZJ_zct:
+        ? /TT_FCNC-T2ZJ_aTleptonic_ZToll_kappa_zct_TuneCP5-madgraphMLM-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM
+        :   - /store/mc/RunIISummer20UL18NanoAODv9/TT_FCNC-T2ZJ_aTleptonic_ZToll_kappa_zct_TuneCP5-madgraphMLM-pythia8/NANOAODSIM/106X_upgrade2018_realistic_v16_L1v1-v2/250000
+            - /store/mc/RunIISummer20UL18NanoAODv9/TT_FCNC-T2ZJ_aTleptonic_ZToll_kappa_zct_TuneCP5-madgraphMLM-pythia8/NANOAODSIM/106X_upgrade2018_realistic_v16_L1v1-v2/2430000
+            - /store/mc/RunIISummer20UL18NanoAODv9/TT_FCNC-T2ZJ_aTleptonic_ZToll_kappa_zct_TuneCP5-madgraphMLM-pythia8/NANOAODSIM/106X_upgrade2018_realistic_v16_L1v1-v2/100000
+    MC2018.TT_FCNC-T2ZJ_zut:
+        ? /TT_FCNC-T2ZJ_aTleptonic_ZToll_kappa_zut_TuneCP5-madgraphMLM-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM
+        :   - /store/mc/RunIISummer20UL18NanoAODv9/TT_FCNC-T2ZJ_aTleptonic_ZToll_kappa_zut_TuneCP5-madgraphMLM-pythia8/NANOAODSIM/106X_upgrade2018_realistic_v16_L1v1-v2/100000
+            - /store/mc/RunIISummer20UL18NanoAODv9/TT_FCNC-T2ZJ_aTleptonic_ZToll_kappa_zut_TuneCP5-madgraphMLM-pythia8/NANOAODSIM/106X_upgrade2018_realistic_v16_L1v1-v2/40000
+            - /store/mc/RunIISummer20UL18NanoAODv9/TT_FCNC-T2ZJ_aTleptonic_ZToll_kappa_zut_TuneCP5-madgraphMLM-pythia8/NANOAODSIM/106X_upgrade2018_realistic_v16_L1v1-v2/230000
+    MC2018.TT_FCNC-aT2ZJ_zct:
+        ? /TT_FCNC-aT2ZJ_Tleptonic_ZToll_kappa_zct_TuneCP5-madgraphMLM-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM
+        :   - /store/mc/RunIISummer20UL18NanoAODv9/TT_FCNC-aT2ZJ_Tleptonic_ZToll_kappa_zct_TuneCP5-madgraphMLM-pythia8/NANOAODSIM/106X_upgrade2018_realistic_v16_L1v1-v2/260000
+            - /store/mc/RunIISummer20UL18NanoAODv9/TT_FCNC-aT2ZJ_Tleptonic_ZToll_kappa_zct_TuneCP5-madgraphMLM-pythia8/NANOAODSIM/106X_upgrade2018_realistic_v16_L1v1-v2/2550000
+            - /store/mc/RunIISummer20UL18NanoAODv9/TT_FCNC-aT2ZJ_Tleptonic_ZToll_kappa_zct_TuneCP5-madgraphMLM-pythia8/NANOAODSIM/106X_upgrade2018_realistic_v16_L1v1-v2/2520000
+            - /store/mc/RunIISummer20UL18NanoAODv9/TT_FCNC-aT2ZJ_Tleptonic_ZToll_kappa_zct_TuneCP5-madgraphMLM-pythia8/NANOAODSIM/106X_upgrade2018_realistic_v16_L1v1-v2/80000
+    MC2018.TT_FCNC-aT2ZJ_zut:
+        ? /TT_FCNC-aT2ZJ_Tleptonic_ZToll_kappa_zut_TuneCP5-madgraphMLM-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM
+        :   - /store/mc/RunIISummer20UL18NanoAODv9/TT_FCNC-aT2ZJ_Tleptonic_ZToll_kappa_zut_TuneCP5-madgraphMLM-pythia8/NANOAODSIM/106X_upgrade2018_realistic_v16_L1v1-v2/230000
+            - /store/mc/RunIISummer20UL18NanoAODv9/TT_FCNC-aT2ZJ_Tleptonic_ZToll_kappa_zut_TuneCP5-madgraphMLM-pythia8/NANOAODSIM/106X_upgrade2018_realistic_v16_L1v1-v2/40000
+            - /store/mc/RunIISummer20UL18NanoAODv9/TT_FCNC-aT2ZJ_Tleptonic_ZToll_kappa_zut_TuneCP5-madgraphMLM-pythia8/NANOAODSIM/106X_upgrade2018_realistic_v16_L1v1-v2/250000
+            - /store/mc/RunIISummer20UL18NanoAODv9/TT_FCNC-aT2ZJ_Tleptonic_ZToll_kappa_zut_TuneCP5-madgraphMLM-pythia8/NANOAODSIM/106X_upgrade2018_realistic_v16_L1v1-v2/2510000
+            - /store/mc/RunIISummer20UL18NanoAODv9/TT_FCNC-aT2ZJ_Tleptonic_ZToll_kappa_zut_TuneCP5-madgraphMLM-pythia8/NANOAODSIM/106X_upgrade2018_realistic_v16_L1v1-v2/2500000
