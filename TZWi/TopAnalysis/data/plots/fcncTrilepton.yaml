@@ -1,0 +1,80 @@
+lumi: [59.830]
+
+canvasStyles: ## Styling rules, later item overrides earlier ones
+  - substr: '' # null string matches to everything
+    logy: false
+  - substr: 'S5'
+    logy: false
+  - substr: 'S6'
+    logy: false
+
+histStyles: # Styling rules, later item overrides earlier ones
+  - title: DYJets
+    color: "kOrange+1"
+  - title: ttJets
+    color: "kRed"
+  - title: GluGluTo4Lep
+    color: "kPink+1"
+  - title: SingleTop
+    color: "kMagenta+1"
+  - title: WJetsToLNu
+    color: "kMagenta+2"
+  - title: TGJets
+    color: "kRed+1"
+  - title: TH
+    color: "kRed+2"
+  - title: TTGamma
+    color: "kRed+3"
+  - title: TTW
+    color: "kRed+4"
+  - title: TTZ
+    color: "kRed+5"
+  - title: TWZToLL
+    color: "kRed+6"
+  - title: ZZ
+    color: "kGreen+1"
+  - title: WZ
+    color: "kGreen+2"
+  - title: WW
+    color: "kGreen+3"
+  - title: TriBosons
+    color: "kGray+1"
+  - title: ttH
+    color: "kGray+2"
+  - title: tZq
+    color: "kGray+3"
+  - title: WGToLNuG
+    color: "kViolet+1"
+  - title: ZGToLLG
+    color: "kViolet+2"
+#######
+  - title: STZut
+    color: "kGreen-7"
+  - title: STZct
+    color: "kBlue"
+  - title: TTZut
+    color: "kGreen+3"
+  - title: TTZct
+    color: "kBlue+2"
+########
+
+stackorders: ## MC samples to stack
+  - tZq
+  - ttH
+  - TriBosons
+  - WW
+  - WZ
+  - ZZ
+  - TWZToLL
+  - TTZ
+  - TTW
+  - TH
+  - WJetsToLNu
+  - SingleTop
+  - GluGluTo4Lep
+  - TGJets
+  - WGToLNuG
+  - TTGamma
+  - ttJets
+  - ZGToLLG
+  - DYJets

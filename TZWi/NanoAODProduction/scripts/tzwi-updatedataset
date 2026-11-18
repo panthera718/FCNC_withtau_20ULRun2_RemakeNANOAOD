@@ -1,0 +1,66 @@
+#!/usr/bin/env python
+
+import yaml
+import sys, os
+import subprocess
+import Utilities.General.cmssw_das_client as das_client
+import XRootD.client as xrdclient
+
+if os.system("voms-proxy-info -exists --valid 8:00") != 0:
+    os.system("voms-proxy-init -voms cms --valid 144:00")
+if os.system("voms-proxy-info -exists --valid 8:00") != 0:
+    print "need GRID PROXY to call dasclient."
+    sys.exit(1)
+
+def getSEBaseURL(fName):
+    #xrdFile = xrdclient.File()
+    #for seBaseURL in ["root://cms-xrdr.private.lo:2094//xrd/",
+    #                  "root://cms-t2-se01.sdfarm.kr:1094//pnfs/sdfarm.kr/data/cms/"]:
+    #    ff = xrdFile.open(seBaseURL+fName)
+    #    if xrdFile.is_open() and xrdFile.stat()[0].status == 0: return seBaseURL
+    if os.path.exists("/xrootd"+fName): return "root://cms-xrdr.private.lo:2094//xrd/"
+    elif os.path.exists("/T2_KR_KISTI"+fName): return "root://cms-t2-se01.sdfarm.kr:1095/"
+    #else:
+    #    seBaseURL = "root://cms-t2-se01.sdfarm.kr:1094//pnfs/sdfarm.kr/data/cms/"
+    #    xrdFile = xrdclient.File()
+    #    ff = xrdFile.open(seBaseURL+fName)
+    #    if xrdFile.is_open() and xrdFile.stat()[0].status == 0: return seBaseURL
+
+    return "root://cms-xrd-global.cern.ch/"
+
+for arg in sys.argv[1:]:
+    data = yaml.load(open(arg))
+    dout = '.'.join(arg.split('.')[:-1])
+    if not os.path.exists(dout): os.makedirs(dout)
+
+    print "Processing", arg, "...."
+    if data == None or len(data) == 0 or \
+       "dataset" not in data or data["dataset"] == None or len(data["dataset"]) == 0: continue
+    for alias, datasets in data["dataset"].iteritems():
+        if datasets == None: continue
+        dsout = os.path.join(dout, alias)
+        if not os.path.exists(dsout): os.makedirs(dsout)
+        for ds in datasets:
+            files = []
+
+            print "Retrieving dataset information", alias, "=>", ds, "from DBS..."
+            das_results = das_client.get_data("file dataset=%s" % ds)
+            
+            dirs = []
+            for das_result in das_results['data']:
+                if len(das_result['file']) == 0: continue
+                fileInfo = das_result['file'][0]
+                fileName = str(fileInfo['name'])
+                files.append(fileName)
+
+                d = os.path.dirname(fileName)
+                if d not in dirs: dirs.append(d)
+            datasets[ds] = dirs[:]
+
+            if len(files) == 0: continue
+
+            prefix = getSEBaseURL(files[0])
+            with open("%s/%s.txt" % (dsout, ds.strip('/').replace('/', '.')), 'w') as fout:
+                for f in files: print>>fout, (prefix+f)
+
+    yaml.dump(data, open(arg, 'w'), indent=4, default_flow_style=False, width=10000)
