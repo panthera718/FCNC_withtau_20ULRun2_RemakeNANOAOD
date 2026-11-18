@@ -1,0 +1,6 @@
+*.jds
+*.root
+*.txt
+*.err
+*.NANOAODSIM/
+*.NANOAOD/

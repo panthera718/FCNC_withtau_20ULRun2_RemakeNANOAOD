@@ -1,0 +1,212 @@
+processes:
+    DataNANOAOD:
+        title: "Data"
+        modes: ["NANOAOD"]
+        cut: "HLT"
+        datasets:
+            - Run2016.DoubleEG
+            - Run2016.SingleElectron
+            - Run2016.DoubleMuon
+            - Run2016.SingleMuon
+            - Run2016.MuonEG
+            - Run2016.Tau
+
+    ttZ:
+        title: "ttZ"
+        longTitle: "t#bar{t}Z"
+        weight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF"
+        FRweight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF*FakeRateWeight"
+        cut: "HLT"
+        datasets:
+            - MC2016.TTZToLLNuNu
+            - MC2016.TTZToLL_M-1to10
+    tZq:
+        title: "tZq"
+        weight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF"
+        FRweight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF*FakeRateWeight"
+        cut: "HLT"
+        datasets:
+            - MC2016.tZq_ll
+    SingleT:
+        title: "SingleT"
+        longTitle: "Single t"
+        weight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF"
+        FRweight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF*FakeRateWeight"
+        cut: "HLT"
+        datasets:
+            - MC2016.ST_tW_top_5f_NoFullyHadronicDecays
+            - MC2016.ST_tW_antitop_5f_NoFullyHadronicDecays
+    WZ:
+        title: "WZ"
+        weight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF"
+        FRweight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF*FakeRateWeight"
+        cut: "HLT"
+        datasets:
+            - MC2016.WZTo3LNu
+    ZZ:
+        title: "ZZ"
+        weight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF"
+        FRweight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF*FakeRateWeight"
+        cut: "HLT"
+        datasets:
+            - MC2016.ZZ_TuneCP5
+    VV:
+        title: "VV"
+        weight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF"
+        FRweight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF*FakeRateWeight"
+        cut: "HLT"
+        datasets:
+            - MC2016.WW_TuneCP5
+            - MC2016.GluGluToContinToZZTo2e2mu
+            - MC2016.GluGluToContinToZZTo2e2tau
+            - MC2016.GluGluToContinToZZTo2mu2tau
+            - MC2016.GluGluToContinToZZTo4e
+            - MC2016.GluGluToContinToZZTo4mu
+            - MC2016.GluGluToContinToZZTo4tau
+    VVV:
+        title: "VVV"
+        weight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF"
+        FRweight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF*FakeRateWeight"
+        cut: "HLT"
+        datasets:
+            - MC2016.WWW_4F_TuneCP5
+            - MC2016.WWZ_4F_TuneCP5
+            - MC2016.WZZ_TuneCP5
+            - MC2016.ZZZ_TuneCP5
+    ttX:
+        title: "ttX"
+        longTitle: "t(t)X"
+        weight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF"
+        FRweight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF*FakeRateWeight"
+        cut: "HLT"
+        datasets:
+            - MC2016.TTWJetsToLNu
+            - MC2016.TTWW
+            - MC2016.TTWZ
+            - MC2016.TTZZ
+            - MC2016.TTGamma_Dilept
+            - MC2016.ttHToNonbb
+    XGamma:
+        title: "XGamma"
+        longTitle: "X#gamma^{*}"
+        weight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF"
+        FRweight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF*FakeRateWeight"
+        cut: "HLT"
+        datasets:
+            - MC2016.ZGToLLG_01J
+            - MC2016.WGToLNuG_01J
+    tWZ:
+        title: "tWZ"
+        weight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF"
+        FRweight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF*FakeRateWeight"
+        cut: "HLT"
+        datasets:
+            - MC2016.TWZToLL_thad_Wlept
+            - MC2016.TWZToLL_tlept_Whad
+            - MC2016.TWZToLL_tlept_Wlept
+    TT:
+        title: "TT"
+        longTitle: "t#bar{t}"
+        weight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF"
+        FRweight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF*FakeRateWeight"
+        cut: "HLT"
+        datasets:
+            - MC2016.TTTo2L2Nu
+            - MC2016.TTToHadronic
+            - MC2016.TTToSemiLeptonic
+
+    STZct:
+        title: "STZct"
+        weight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF"
+        FRweight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF*FakeRateWeight"
+        cut: "HLT"
+        datasets:
+            - MC2016.ST_FCNC-TLL_zct
+    STZut:
+        title: "STZut"
+        weight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF"
+        FRweight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF*FakeRateWeight"
+        cut: "HLT"
+        datasets:
+            - MC2016.ST_FCNC-TLL_zut
+    TTZct:
+        title: "TTZct"
+        weight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF"
+        FRweight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF*FakeRateWeight"
+        cut: "HLT"
+        datasets:
+            - MC2016.TT_FCNC-T2ZJ_zct
+            - MC2016.TT_FCNC-aT2ZJ_zct
+    TTZut:
+        title: "TTZut"
+        weight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF"
+        FRweight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF*FakeRateWeight"
+        cut: "HLT"
+        datasets:
+            - MC2016.TT_FCNC-T2ZJ_zut
+            - MC2016.TT_FCNC-aT2ZJ_zut
+
+    QCD:
+        title: "QCD"
+        weight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF"
+        FRweight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF*FakeRateWeight"
+        cut: "HLT"
+        datasets:
+            - MC2016.QCD_HT50to100
+            - MC2016.QCD_HT100to200
+            - MC2016.QCD_HT200to300
+            - MC2016.QCD_HT300to500
+            - MC2016.QCD_HT500to700
+            - MC2016.QCD_HT700to1000
+            - MC2016.QCD_HT1000to1500
+            - MC2016.QCD_HT1500to2000
+            - MC2016.QCD_HT2000toInf
+
+    NPLDYJets:
+        title: "NPLDYJets"
+        weight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF"
+        FRweight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF*FakeRateWeight"
+        cut: "HLT"
+        datasets:
+            - MC2016.DYJetsToLL_M-10to50
+            - MC2016.DYJetsToLL_M-50
+    NPLST:
+        title: "NPLST"
+        weight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF"
+        FRweight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF*FakeRateWeight"
+        cut: "HLT"
+        datasets:
+            - MC2016.ST_s-channel_4f_leptonDecays
+            - MC2016.ST_tW_top_5f_inclusiveDecays
+            - MC2016.ST_tW_antitop_5f_inclusiveDecays
+#    NPLTT:
+#        title: "NPLTT"
+#        weight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF"
+#        FRweight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF*FakeRateWeight"
+#        cut: "HLT"
+#        datasets:
+#            - MC2016.TTToSemiLeptonic
+#            - MC2016.TTTo2L2Nu
+    NPLTTV:
+        title: "NPLTTV"
+        weight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF"
+        FRweight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF*FakeRateWeight"
+        cut: "HLT"
+        datasets:
+            - MC2016.TTWJetsToQQ
+            - MC2016.TTZToQQ
+    NPLWJetsToLNu:
+        title: "NPLWJetsToLNu"
+        weight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF"
+        FRweight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF*FakeRateWeight"
+        cut: "HLT"
+        datasets:
+            - MC2016.WJetsToLNu
+
+    TTTT:
+        title: "TTTT"
+        weight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF"
+        FRweight: "genWeight/abs(genWeight)*puWeight*BtagWeight*Lepton_SF*FakeRateWeight"
+        cut: "HLT"
+        datasets:
+            - MC2016.TTTT

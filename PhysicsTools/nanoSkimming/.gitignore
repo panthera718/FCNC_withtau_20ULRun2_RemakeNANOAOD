@@ -1,0 +1,13 @@
+# ignore cached python folders
+**__pycache__**
+# ignore compiled python
+**.pyc
+# ignore CRAB logs
+crabsubmission/crablogs*
+crabsubmission/crab.log
+# ignore proxy
+**x509**
+# ignore sample lists
+samplelists
+# ignore output directories
+**output**

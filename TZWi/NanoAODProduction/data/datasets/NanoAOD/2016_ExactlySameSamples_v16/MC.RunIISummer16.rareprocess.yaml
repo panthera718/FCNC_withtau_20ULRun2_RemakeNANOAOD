@@ -1,0 +1,22 @@
+dataset:
+    MC2016.ST_FCNC-TLL_zct:
+        ? /ST_FCNC-TLL_Tleptonic_kappa_zct_TuneCP5-madgraph-pythia8/RunIISummer20UL16NanoAODAPVv9-tauDecays_106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM
+        :   - /store/mc/RunIISummer20UL16NanoAODAPVv9/ST_FCNC-TLL_Tleptonic_kappa_zct_TuneCP5-madgraph-pythia8/NANOAODSIM/tauDecays_106X_mcRun2_asymptotic_preVFP_v11-v2/70000
+    MC2016.ST_FCNC-TLL_zut:
+        ? /ST_FCNC-TLL_Tleptonic_kappa_zut_TuneCP5-madgraph-pythia8/RunIISummer20UL16NanoAODAPVv9-tauDecays_106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM
+        :   - /store/mc/RunIISummer20UL16NanoAODAPVv9/ST_FCNC-TLL_Tleptonic_kappa_zut_TuneCP5-madgraph-pythia8/NANOAODSIM/tauDecays_106X_mcRun2_asymptotic_preVFP_v11-v2/70000
+    MC2016.TT_FCNC-T2ZJ_zct:
+        ? /TT_FCNC-T2ZJ_aTleptonic_ZToll_kappa_zct_TuneCP5-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM
+        :   - /store/mc/RunIISummer20UL16NanoAODAPVv9/TT_FCNC-T2ZJ_aTleptonic_ZToll_kappa_zct_TuneCP5-madgraphMLM-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_preVFP_v11-v2/70000
+            - /store/mc/RunIISummer20UL16NanoAODAPVv9/TT_FCNC-T2ZJ_aTleptonic_ZToll_kappa_zct_TuneCP5-madgraphMLM-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_preVFP_v11-v2/30000
+    MC2016.TT_FCNC-T2ZJ_zut:
+        ? /TT_FCNC-T2ZJ_aTleptonic_ZToll_kappa_zut_TuneCP5-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM
+        :   - /store/mc/RunIISummer20UL16NanoAODAPVv9/TT_FCNC-T2ZJ_aTleptonic_ZToll_kappa_zut_TuneCP5-madgraphMLM-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_preVFP_v11-v2/70000
+            - /store/mc/RunIISummer20UL16NanoAODAPVv9/TT_FCNC-T2ZJ_aTleptonic_ZToll_kappa_zut_TuneCP5-madgraphMLM-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_preVFP_v11-v2/2810000
+    MC2016.TT_FCNC-aT2ZJ_zct:
+        ? /TT_FCNC-aT2ZJ_Tleptonic_ZToll_kappa_zct_TuneCP5-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM
+        :   - /store/mc/RunIISummer20UL16NanoAODAPVv9/TT_FCNC-aT2ZJ_Tleptonic_ZToll_kappa_zct_TuneCP5-madgraphMLM-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_preVFP_v11-v2/2820000
+            - /store/mc/RunIISummer20UL16NanoAODAPVv9/TT_FCNC-aT2ZJ_Tleptonic_ZToll_kappa_zct_TuneCP5-madgraphMLM-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_preVFP_v11-v2/2550000
+    MC2016.TT_FCNC-aT2ZJ_zut:
+        ? /TT_FCNC-aT2ZJ_Tleptonic_ZToll_kappa_zut_TuneCP5-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM
+        :   - /store/mc/RunIISummer20UL16NanoAODAPVv9/TT_FCNC-aT2ZJ_Tleptonic_ZToll_kappa_zut_TuneCP5-madgraphMLM-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_preVFP_v11-v2/80000
